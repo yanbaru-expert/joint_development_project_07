@@ -1,15 +1,19 @@
 class UsersController < ApplicationController
-  
+
   def index
   @users = User.all
   end
 
   def new
-    @user = User.new
+  @user = User.new
   end
 
   def create
   User.create(user_params)
+  end
+
+  def show
+  @user = user.find(params[:id])
   end
 
   private
