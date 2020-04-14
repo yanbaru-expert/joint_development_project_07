@@ -1,0 +1,6 @@
+<%= form_for @user, url: user_path(@user), html: { method: :path } do |f| %>
+  <p>ユーザー詳細</p>
+  <p>氏名：<%= @user.name %></p>
+  <p>年齢：<%= @user.age %></p>
+<%= link_to "一覧画面へ", users_path %>
+<% end %>
