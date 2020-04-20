@@ -1,0 +1,6 @@
+<%= form_for @task, url: task_path(@task), html: { method: :path } do |f| %>
+  <h1>タスク詳細</h1>
+  <p>タイトル：<%= @task.title %></p>
+  <p>内容：<%= @task.content %></p>
+<%= link_to "一覧画面へ", tasks_path %>
+<% end %>
