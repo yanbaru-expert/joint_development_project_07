@@ -1,6 +1,6 @@
-<%= form_with model: @message, local: true do |f| %>
-  <h1>メッセージ作成</h1>
-  <p>タイトル：<%= f.text_field :title %></p>
-  <p>内容：<%= f.text_field :content %></p>
-  <%= f.submit "送信" %>
+<%= form_for @message, url: message_path(@message), html: { method: :path } do |f| %>
+  <p>メッセージ詳細</p>
+  <p>タイトル：<%= @message.title %></p>
+  <p>内容：<%= @message.content %></p>
+<%= link_to "一覧画面へ", messages_path %>
 <% end %>
