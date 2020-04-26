@@ -1,0 +1,6 @@
+<%= form_for @message, url: message_path(@message), html: { method: :path } do |f| %>
+  <p>メッセージ詳細</p>
+  <p>タイトル：<%= @message.title %></p>
+  <p>内容：<%= @message.content %></p>
+<%= link_to "一覧画面へ", messages_path %>
+<% end %>
